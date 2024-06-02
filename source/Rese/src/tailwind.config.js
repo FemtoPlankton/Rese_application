@@ -14,6 +14,15 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            boxShadow: {
+                'rb-md': '4px 4px 4px 0 rgba(0, 0, 0, 0.4)',
+            },
+            borderWidth: {
+                '1': '1px',
+            },
+            screens: {
+                'cm': '375px',
+            },
         },
     },
 
