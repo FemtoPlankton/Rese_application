@@ -3,7 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Illuminate\Auth\Access\AuthorizationException;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -23,8 +23,8 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->reportable(function (AuthorizationException $e, $request) {
-            return redirect('/expired')->withErrors(['message' => $e->getMessage()]);
+        $this->reportable(function (Throwable $e) {
+            //
         });
     }
 }
